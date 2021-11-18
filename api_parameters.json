@@ -1,0 +1,26 @@
+[
+  {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "test"
+  },
+  {
+    "ParameterKey": "ImageUrl",
+    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtapi:3461919"
+  },
+  {
+    "ParameterKey": "ServiceName",
+    "ParameterValue": "djbrdfrgtapi"
+  },
+  {
+    "ParameterKey": "ContainerPort",
+    "ParameterValue": "3000"
+  },
+  {
+    "ParameterKey": "Path",
+    "ParameterValue": "/api/*"
+  },
+  {
+    "ParameterKey": "Priority",
+    "ParameterValue": "1"
+  }
+]

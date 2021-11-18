@@ -1,0 +1,30 @@
+[
+  {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "test"
+  },
+  {
+    "ParameterKey": "ImageUrl",
+    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtclient:fbc19c5"
+  },
+  {
+    "ParameterKey": "ServiceName",
+    "ParameterValue": "djbrdfrgtclient"
+  },
+  {
+    "ParameterKey": "ContainerPort",
+    "ParameterValue": "80"
+  },
+  {
+    "ParameterKey": "Path",
+    "ParameterValue": "*"
+  },
+  {
+    "ParameterKey": "Priority",
+    "ParameterValue": "3"
+  },
+  {
+    "ParameterKey": "HealthCheckPath",
+    "ParameterValue": "/nginx-health"
+  }
+]

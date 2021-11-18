@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Certificate for djbrd.com
+
+Resources:
+  TLSCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: djbrd.com
+      DomainValidationOptions:
+        - DomainName: djbrd.com
+          HostedZoneId: Z043661760LZHNI3NZGJ
+      ValidationMethod: DNS
+      SubjectAlternativeNames:
+        - "*.djbrd.com"
+
+Outputs:
+  TLSCertificate:
+    Description: TLS Certificate
+    Value: !Ref "TLSCertificate"
+    Export:
+      Name: djbrdTLSCertificate

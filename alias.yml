@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Record for linking domain to load balancer
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, prod, stage, test]
+
+Resources:
+  LoadBalancerAlias:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: Z043661760LZHNI3NZGJ
+      RecordSets:
+        - Name: djbrd.com
+          Type: A
+          AliasTarget:
+            HostedZoneId:
+              Fn::ImportValue: !Sub ${EnvironmentName}:LoadBalancerHostedZoneId
+            DNSName:
+              Fn::ImportValue: !Sub ${EnvironmentName}:LoadBalancerDNSName
+        - Name: test.djbrd.com
+          Type: A
+          AliasTarget:
+            HostedZoneId:
+              Fn::ImportValue: !Sub ${EnvironmentName}:LoadBalancerHostedZoneId
+            DNSName:
+              Fn::ImportValue: !Sub ${EnvironmentName}:LoadBalancerDNSName

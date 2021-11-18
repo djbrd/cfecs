@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: creation of a private ECR repository
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, prod, stage, test]
+  RepositoryName:
+    Type: String
+    Description: A name for the repository
+
+Resources:
+  Repository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Ref "RepositoryName"
+
+Outputs:
+  RepositoryUri:
+    Description: Uri of repository
+    Value: !GetAtt Repository.RepositoryUri
+    Export:
+      Name: !Sub ${EnvironmentName}:${RepositoryName}:RepositoryUri
