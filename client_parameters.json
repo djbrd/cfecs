@@ -5,7 +5,7 @@
   },
   {
     "ParameterKey": "ImageUrl",
-    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtclient:fbc19c5"
+    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtclient:ae2b8a6"
   },
   {
     "ParameterKey": "ServiceName",

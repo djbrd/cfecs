@@ -5,26 +5,26 @@
   },
   {
     "ParameterKey": "ImageUrl",
-    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtapi:ea02965"
+    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/allnighterclient:1e8a779"
   },
   {
     "ParameterKey": "ServiceName",
-    "ParameterValue": "djbrdfrgtapi"
+    "ParameterValue": "allnighterclient"
   },
   {
     "ParameterKey": "ContainerPort",
-    "ParameterValue": "3000"
+    "ParameterValue": "80"
   },
   {
     "ParameterKey": "Path",
-    "ParameterValue": "/api*"
+    "ParameterValue": "*"
   },
   {
     "ParameterKey": "Priority",
-    "ParameterValue": "1"
+    "ParameterValue": "3"
   },
   {
     "ParameterKey": "HealthCheckPath",
-    "ParameterValue": "/api"
+    "ParameterValue": "/nginx-health"
   }
 ]

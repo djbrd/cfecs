@@ -5,11 +5,11 @@
   },
   {
     "ParameterKey": "ImageUrl",
-    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/djbrdfrgtapi:ea02965"
+    "ParameterValue": "187916448622.dkr.ecr.eu-central-1.amazonaws.com/allnighterapi:c39a6e1"
   },
   {
     "ParameterKey": "ServiceName",
-    "ParameterValue": "djbrdfrgtapi"
+    "ParameterValue": "allnighterapi"
   },
   {
     "ParameterKey": "ContainerPort",

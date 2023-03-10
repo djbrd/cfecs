@@ -21,11 +21,11 @@ Parameters:
     Description: What port number the application inside the docker container is binding to
   ContainerCpu:
     Type: Number
-    Default: 256
+    Default: 512
     Description: How much CPU to give the container. 1024 is 1 CPU
   ContainerMemory:
     Type: Number
-    Default: 512
+    Default: 1024
     Description: How much memory in megabytes to give the container
   Path:
     Type: String
@@ -95,9 +95,32 @@ Resources:
               awslogs-group: !Sub ${EnvironmentName}-service-${ServiceName}
               awslogs-region: !Ref "AWS::Region"
               awslogs-stream-prefix: !Ref "ServiceName"
-          Secrets:
-            - Name: TEST_ENVVAR
-              ValueFrom: "/test/envvar"
+          # Secrets: # for djbrdfrgtapi
+          #   - Name: TEST_ENVVAR
+          #     ValueFrom: "/test/envvar"
+          #   - Name: JWT_SECRET
+          #     ValueFrom: "/test/jwt_secret"
+          #   - Name: ATLAS_URL
+          #     ValueFrom: "/test/atlas_url"
+          # Secrets: # for allnighterapi
+          #   - Name: ADMIN_EMAIL
+          #     ValueFrom: "/allnighter/admin_email"
+          #   - Name: ATLAS_URL
+          #     ValueFrom: "/allnighter/atlas_url"
+          #   - Name: FACEBOOK_APP_ID
+          #     ValueFrom: "/allnighter/facebook_app_id"
+          #   - Name: FACEBOOK_APP_SECRET
+          #     ValueFrom: "/allnighter/facebook_app_secret"
+          #   - Name: GOOGLE_CLIENT_ID
+          #     ValueFrom: "/allnighter/google_client_id"
+          #   - Name: JWT_SECRET
+          #     ValueFrom: "/allnighter/jwt_secret"
+          #   - Name: AWS_ACCESS_KEY_ID
+          #     ValueFrom: "/allnighter/s3/aws_access_key_id"
+          #   - Name: AWS_SECRET_ACCESS_KEY
+          #     ValueFrom: "/allnighter/s3/aws_secret_access_key"
+          #   - Name: AWS_REGION
+          #     ValueFrom: "/allnighter/s3/aws_region"
 
   # The service. The service is a resource which allows you to run multiple
   # copies of a type of task, and gather up their logs and metrics, as well
